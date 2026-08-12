@@ -1,0 +1,18 @@
+name: "build-actions"
+description: "Build all actions in a directory using Bun (installs Bun if needed)"
+inputs:
+  path:
+    description: "Directory to scan for actions (default: actions)"
+    required: false
+    default: "actions"
+  minify:
+    description: "Minify output bundles"
+    required: false
+    default: "false"
+  packages:
+    description: "How to handle node_modules: 'bundle' (self-contained) or 'external' (needs node_modules at runtime)"
+    required: false
+    default: "bundle"
+runs:
+  using: "node20"
+  main: "dist/index.js"

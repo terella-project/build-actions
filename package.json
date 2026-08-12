@@ -1,0 +1,40 @@
+{
+  "name": "@terella/build-actions",
+  "version": "0.1.0",
+  "description": "Reusable GitHub Action that builds action-framework actions in your workflow",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check",
+    "format": "biome check --write",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@actions/exec": "^3.0.0",
+    "@terella/action-framework": "^0.0.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.7",
+    "@types/bun": "^1.3.14",
+    "@types/node": "^20.14.0",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "github.com/terella-project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terella-project/build-actions.git"
+  },
+  "files": [
+    "dist",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ]
+}
